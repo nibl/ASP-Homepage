@@ -14,7 +14,7 @@ num_home_posts: 3
 # - purple
 # - orange
 # - red
-color: default
+color: blue
 
 # Show navigation below each post?
 show_post_navs: true
@@ -23,3 +23,5 @@ show_post_navs: true
 # You can also hide the sidebar by setting hide_sidebar: true on
 # the YAML front matter for each page.
 hide_sidebar: false
+
+
