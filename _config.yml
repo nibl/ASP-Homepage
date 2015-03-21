@@ -1,9 +1,21 @@
+encoding: utf-8
+
 baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
 url: "http://nibl.github.io/movitos" # the base hostname & protocol for your site
 title: "Movitos"
 
 # This is used by feed.xml. Uncomment if you want to use it.
 description: "Movitos: Create and produce on iOS"
+
+podcastdescription: "Movitos: Create and produce on iOS"
+
+author:
+  name: Marcus Clearspring
+  url: /contact
+
+
+
+
 
 gems:
   - jemoji
