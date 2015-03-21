@@ -8,12 +8,28 @@ title: "Movitos"
 description: "Movitos: Create and produce on iOS"
 
 podcastdescription: "Movitos: Create and produce on iOS"
+keywords:
+- apps
+- ios
+- ipad
+- iphone
 
 author:
   name: Marcus Clearspring
   url: /contact
 
+podcast:
+  owner: Wordit Limited
+    name: Marcus Clearspring
+    email: hello@wordit.com
+  explicit: "no"
+  image: http://files.ipoweruser.com/podcasts/ipoweruser_logo_256.png
+  category: Technology
+  subtitle: How to be seriously productive and creative on iPhone and iPad.
+  defaultFileType: audio/mpeg
+  year: 2015
 
+paginate: 5
 
 
 
