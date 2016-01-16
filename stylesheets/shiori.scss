@@ -47,6 +47,12 @@ $purple: #9b59b6;
 $orange: #e67e22;
 $red: #e74c3c;
 
+
+$movitos-dark-green: #77BF43;
+$movitos-light-green: #A3E343;
+$movitos-orange: #F89C1C;
+
+
 {% unless site.data.theme.color == "default" %}
   $theme-color: ${{ site.data.theme.color }};
   $navbar-inverse-bg: $theme-color;

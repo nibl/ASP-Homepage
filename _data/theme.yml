@@ -14,7 +14,12 @@ num_home_posts: 4
 # - purple
 # - orange
 # - red
-color: dark
+
+# - movitos-dark-green
+# - movitos-light-green
+# - movitos-orange
+
+color: movitos-orange
 
 # Show navigation below each post?
 show_post_navs: true
