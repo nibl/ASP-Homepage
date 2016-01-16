@@ -1,13 +1,46 @@
 ---
-title: Contact
 permalink: "contact/index.html"
 layout: page
 ---
+<div class="contact-page col-sm-8 col-sm-offset-2 ">
+	<h1 class="text-center">Contact</h1>
+	<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	<div>
+		<form id="contactForm">
+			<div class="form-group">
+				<label>Name</label>
+				<input type="text" name="name" data-message="Please fill out this field." required>
+				<span class="bar"></span>
+			</div>
+			<div class="form-group">
+				<label>Email</label>
+				<input type="email" id="email" name="email" data-message="Please fill out your email address." required>
+				<span class="bar"></span>
+			</div>
+			<div class="form-group">
+				<label>How can I help you?</label>
+				<span class="bar"></span>
+				<select class="form-control" name="subject">
+					<option></option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+				</select>
+			</div>
 
-<h2>Got a question?</h2>
-<br />
+			<div class="form-group" id="msg">
+				<label>Message</label>
+				<textarea class="form-control" rows="4" name="message" required></textarea>
 
-<script type="text/javascript" src="http://form.jotformeu.com/jsform/50662115758356"></script>
-
-<!-- iframe src="http://www.contactme.com/4fa346d1a45c430001000c6a/embed" frameborder="0" scrolling="no" allowtransparency="true" style="height: 400px; width: 550px;"></iframe -->
-
+				<button type="submit" value="Submit" class="orange-button btn">
+					Send
+					<i class="fa fa-paper-plane-o"></i>
+					<i class="fa fa-refresh fa-spin"></i>
+				</button>
+			</div>
+			<p class="text-success status-message hidden">Succesfully sent.</p>
+			<p class="text-danger status-message hidden">Error sending email.</p>
+		</form>
+	</div>
+</div>

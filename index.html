@@ -1,19 +1,41 @@
 ---
 ---
 
+
+<div class="second-headline">
+	<h2>Lorem Ipsum</h2>
+	<h3>At vero eos et</h3>
+	<p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+</div>
+
 {% for post in site.posts limit:site.data.theme.num_home_posts %}
-<div class="post-header-home">
-  <h1 class="post-title-home">
-    <a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
-  </h1>
-  {% include post-header-home.html %}
-</div>
-<div class="post-excerpt-home">
-  {{ post.excerpt }}
-  <p class="text-right"><a href="{{ post.url | prepend:site.baseurl }}">Continue Reading &rarr;</a></p>
-</div>
+	<div class="post-header-home clearfix {% unless post.image %}no-image{% endunless %}">
+		<div class="image-position">
+            <a href="{{ post.url | prepend:site.baseurl }}/">
+            <div class="post-image-position">
+              {% if post.image %}
+                <div class="blog-post-image" style="background: url('{{ post.image }}') center/cover;"></div>
+                <img src="{{ post.image }}" class="blog-post-image" alt="{{ post.description }}">
+              {% endif %}
+            </div>
+            </a>
+        </div>
+
+		<div class="blog-post-body">
+			<h1 class="post-title-home">
+				<a href="{{ post.url | prepend:site.baseurl }}/">{{ post.title }}</a>
+			</h1>
+			{% include post-header-home.html %}
+			<div class="post-excerpt-home">
+				{{ post.content | strip_html | truncatewords: 35 }}
+				<p class="text-right"><a href="{{ post.url | prepend:site.baseurl }}/">Continue Reading &rarr;</a></p>
+			</div>
+		</div>
+	</div>
 {% endfor %}
-<hr>
-<div class="home-read-more">
+
+<!-- <div class="home-read-more">
   <a href="{{ "/archive" | prepend:site.baseurl }}" class="btn btn-primary btn-block btn-lg">View All {{ site.posts | size }} Articles →</a>
-</div>
+</div> -->
+
+<div class="embedded-form"></div> <!-- Embedded form -->

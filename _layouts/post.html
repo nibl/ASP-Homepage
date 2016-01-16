@@ -2,19 +2,16 @@
 layout: default
 ---
 
+<div class="image-position">
+  {% if page.image %}
+    <div class="blog-page-image" style="background: url('{{ page.image }}') center/cover;"></div>
+    <img src="{{ page.image }}" alt="{{ page.description }}">
+  {% endif %}
+</div>
 <div class="post-header">
   <h1 class="post-title-main">{{ page.title }}</h1>
   {% include post-header.html %}
 </div>
-
-{% capture reading_time %}{{ content | strip_html | number_of_words | plus:91 | divided_by:180 }}{% endcapture %}
-
-{% if reading_time <= '1' %}{{ '1' | append:' minute read' }}{% else %}{{ reading_time | append:' minutes read' }}{% endif %}
-
-Reading Time: }{{ reading_time }}
-
-
-
 <div class="post-content">
   {{ content }}
 </div>
@@ -23,31 +20,37 @@ Reading Time: }{{ reading_time }}
 </div>
 {% if site.data.theme.show_post_navs %}
   {% if page.previous or page.next %}
-    <div class="post-navs row">
+    <div class="post-navs">
       {% if page.previous %}
-        <div class="col-md-6 post-nav">
-          <h3 class="section-header">
-            Older
-            <span class="text-muted"> &middot; </span>
-            <a href="{{ "/archive" | prepend:site.baseurl }}">View Archive ({{ site.posts.size }})</a>
-          </h3>
-          <h2 class="post-title-link"><a href="{{ page.previous.url | prepend:site.baseurl }}">{{ page.previous.title }}</a></h2>
-          <h2>{{ page.previous.summary }}</h2>
-          {{ page.previous.excerpt | markdownify }}
+        <div class="col-md-6 post-nav post-nav-first">
+          <div class="image-position">
+            <a href="{{ page.previous.url | prepend:site.baseurl}}/">
+              {% if page.previous.image %}
+                <div class="blog-next-image" style="background: url('{{ page.previous.image }}') center/cover;"></div>
+                <img src="{{ page.previous.image }}" alt="{{ page.previous.description }}">
+              {% endif %}
+            </a>
+          </div>
+          <h2 class="post-title-link post-next-link"><a href="{{ page.previous.url | prepend:site.baseurl }}/">{{ page.previous.title }}</a></h2>
+          <h3>{{ page.previous.summary }}</h3>
+          {{ page.previous.excerpt | markdownify | truncatewords: 100 }}
+          <p class="text-right"><a href="{{ page.previous.url | prepend:site.baseurl }}/">Continue Reading &rarr;</a></p>
         </div>
       {% endif %}
       {% if page.next %}
         <div class="col-md-6 post-nav">
-          <h3 class="section-header">
-            Newer
-            {% unless page.previous %}
-              <span class="text-muted"> &middot; </span>
-              <a href="{{ "/archive" | prepend:site.baseurl }}">View Archive ({{ site.posts.size }})</a>
-            {% endunless %}
-          </h3>
-          <h2 class="post-title-link"><a href="{{ page.next.url | prepend:site.baseurl }}">{{ page.next.title }}</a></h2>
-          <h2>{{ page.next.summary }}</h2>
-          {{ page.next.excerpt | markdownify }}
+          <div class="image-position">
+            <a href="{{ page.next.url | prepend:site.baseurl}}/">
+              {% if page.next.image %}
+                <div class="blog-next-image" style="background: url('{{ page.next.image }}') center/cover;"></div>
+                <img src="{{ page.next.image }}" alt="{{ page.next.description }}">
+              {% endif %}
+            </a>
+          </div>
+          <h2 class="post-title-link post-next-link"><a href="{{ page.next.url | prepend:site.baseurl }}/">{{ page.next.title }}</a></h2>
+          <h3>{{ page.next.summary }}</h3>
+          {{ page.next.excerpt | markdownify | truncatewords: 100 }}
+          <p class="text-right"><a href="{{ page.next.url | prepend:site.baseurl }}/">Continue Reading &rarr;</a></p>
         </div>
       {% endif %}
     </div>

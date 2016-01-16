@@ -1,12 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{{ site.author.@twitter }}">
+    
+    {% if page.title %}
+      <meta name="twitter:title" content="{{ page.title }}">
+    {% else %}
+      <meta name="twitter:title" content="{{ site.title }}">
+    {% endif %}
+
+    {% if page.url %}
+      <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+    {% endif %}
+
+    {% if page.description %}
+      <meta name="twitter:description" content="{{ page.description }}">
+    {% else %}
+      <meta name="twitter:description" content="{{ site.description }}">
+    {% endif %}
+
+    {% if page.image %}
+      <meta name="twitter:image" content="{{ page.image }}">
+    {% endif %}
+
     <link rel="stylesheet" href="{{ "/stylesheets/shiori.css" | prepend:site.baseurl }}">
-    <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic|Montserrat:400,700|Open+Sans' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend:site.baseurl }}">
@@ -16,6 +39,14 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     {% include head.html %}
+
+    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+      <script type="text/javascript">
+        window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"/privacy-policy","theme":"light-top"};
+      </script>
+
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    <!-- End Cookie Consent plugin -->
   </head>
   <body>
   {% if site.data.theme.color == "default" %}
@@ -44,6 +75,15 @@
         </div>
       </div>
     </div>
+    {% if page.name == "index.html" %} 
+    <div class="text-center blog-page-header">
+      <h1>Headline goes here</h1>
+      <h2>Sub-headline</h2>
+    </div>
+    <!-- Sign up form goes here -->
+    {% include left-margin-form.html %}
+    <!-- End of sing up form -->
+    {% endif %}
     <div class="container">
       <div class="row">
         {% if page.hide_sidebar or site.data.theme.hide_sidebar %}
@@ -59,14 +99,15 @@
           </div>
         {% endif %}
       </div>
-      <div class="row footer">
-        <div class="col-sm-12 text-center">
-          {% include footer.html %}
-        </div>
-      </div>
     </div>
+      <div class="footer">
+        {% include footer.html %}
+      </div>
     <script src="{{ "/javascripts/jquery.min.js" | prepend:site.baseurl }}"></script>
     <script src="{{ "/javascripts/bootstrap.min.js" | prepend:site.baseurl }}"></script>
+    <script src="{{ "/javascripts/jquery.ajaxchimp.min.js" | prepend:site.baseurl }}"></script>
+    <script src="{{ "/javascripts/validatr.js" | prepend:site.baseurl }}"></script>
+    <script src="{{ "/javascripts/main.js" | prepend:site.baseurl }}"></script>
     <!-- <script src="{{ "/javascripts/purplecoat-min.js" | prepend:site.baseurl }}"></script> -->
     {% include scripts.html %}
   </body>
