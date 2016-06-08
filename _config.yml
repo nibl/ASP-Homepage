@@ -1,11 +1,11 @@
 encoding: utf-8
 
 baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
-url: "http://movitos.com" # the base hostname & protocol for your site
-title: "Movitos"
+url: "http://makernotes.com" # the base hostname & protocol for your site
+title: "Makernotes"
 
 # This is used by feed.xml. Uncomment if you want to use it.
-description: "Movitos Learn to make apps"
+description: "Makernotes Learn to make apps"
 
 author:
   name: Marcus Clearspring
