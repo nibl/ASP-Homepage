@@ -40,17 +40,17 @@ layout: default
       {% if page.next %}
         <div class="col-md-6 post-nav">
           <div class="image-position">
-            <a href="{{ page.next.url | prepend:site.baseurl}}/">
+            <a href="{{ page.next.url | prepend:site.baseurl}}">
               {% if page.next.image %}
                 <div class="blog-next-image" style="background: url('{{ page.next.image }}') center/cover;"></div>
                 <img src="{{ page.next.image }}" alt="{{ page.next.description }}">
               {% endif %}
             </a>
           </div>
-          <h2 class="post-title-link post-next-link"><a href="{{ page.next.url | prepend:site.baseurl }}/">{{ page.next.title }}</a></h2>
+          <h2 class="post-title-link post-next-link"><a href="{{ page.next.url | prepend:site.baseurl }}">{{ page.next.title }}</a></h2>
           <h3>{{ page.next.summary }}</h3>
           {{ page.next.excerpt | markdownify | truncatewords: 100 }}
-          <p class="text-right"><a href="{{ page.next.url | prepend:site.baseurl }}/">Continue Reading &rarr;</a></p>
+          <p class="text-right"><a href="{{ page.next.url | prepend:site.baseurl }}">Continue Reading &rarr;</a></p>
         </div>
       {% endif %}
     </div>
