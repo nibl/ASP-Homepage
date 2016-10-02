@@ -31,10 +31,10 @@ layout: default
               {% endif %}
             </a>
           </div>
-          <h2 class="post-title-link post-next-link"><a href="{{ page.previous.url | prepend:site.baseurl }}/">{{ page.previous.title }}</a></h2>
+          <h2 class="post-title-link post-next-link"><a href="{{ page.previous.url | prepend:site.baseurl }}">{{ page.previous.title }}</a></h2>
           <h3>{{ page.previous.summary }}</h3>
           {{ page.previous.excerpt | markdownify | truncatewords: 100 }}
-          <p class="text-right"><a href="{{ page.previous.url | prepend:site.baseurl }}/">Continue Reading &rarr;</a></p>
+          <p class="text-right"><a href="{{ page.previous.url | prepend:site.baseurl }}">Continue Reading &rarr;</a></p>
         </div>
       {% endif %}
       {% if page.next %}
