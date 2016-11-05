@@ -1,11 +1,11 @@
 encoding: utf-8
 
 baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
-url: "http://makernotes.co/" # the base hostname & protocol for your site
-title: "Makernotes"
+url: "http://featurescrutinizer.net/" # the base hostname & protocol for your site
+title: "Feature Scrutinizer"
 
 # This is used by feed.xml. Uncomment if you want to use it.
-description: "Notebooks for developers"
+description: "Feature discovery app for developers"
 
 author:
   name: Marcus Clearspring
