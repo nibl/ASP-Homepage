@@ -2,9 +2,7 @@
 
 /* For mobile phones: */
 body {
-  width: 100%;
   font-size: 22px;
- 
 }
 
 p {
@@ -23,7 +21,7 @@ margin-right: auto;
 font-size: 18px;
 
 .wrapper {
-max-width: 500px;
+max-width: 200px;
 margin-left: auto;
 margin-right: auto;
 }
