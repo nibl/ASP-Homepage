@@ -37,7 +37,10 @@ blockquote {
   border-left: 3px solid #5aa0cf;
   padding: 6px 0 6px 35px; }
   
-.pad15 {padding: 15px;}
+.pad15 {
+padding-left: 15px;
+padding-right: 15px;
+}
 
 .topmargin25 {margin-top: 25px}
 .topmargin50 {margin-top: 50px}
