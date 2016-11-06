@@ -19,11 +19,15 @@ margin-right: auto;
 @media only screen and (min-width: 768px) {
   /* For desktop: */
 
-.wrapper {
-max-width: 200px;
-margin-left: auto;
-margin-right: auto;
-}
+  .wrapper {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+  body {
+  font-size: 22px;
+  }
 
 
 }
