@@ -51,7 +51,7 @@ margin-right: auto;
 margin-left: auto;
 }
 
-.headline {
+.headline, h3, h2 {
 text-align: center;
 }
 
