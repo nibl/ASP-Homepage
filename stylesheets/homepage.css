@@ -2,10 +2,14 @@
 
 /* For mobile phones: */
 body {
+        font-family: 'Lato', sans-serif;
   font-size: 18pt;
   background-color: #f7f7f7;
 }
 
+h1 {font-size: 40px;}
+h2 {font-size: 32px;}
+h3 {font-size: 28px;}
 p {
 padding-left: 15px;
 padding-right: 15px;
@@ -34,6 +38,7 @@ margin-right: auto;
 
 
 blockquote {
+font-style:italic;
   border-left: 3px solid #5aa0cf;
   padding: 6px 0 6px 35px; }
   
@@ -51,8 +56,10 @@ margin-right: auto;
 margin-left: auto;
 }
 
-.headline, h3, h2 {
+.headline, h1, h3, h2 {
+font-family: 'Roboto', sans-serif;
 text-align: center;
+padding: 5px 15px 5px 15px;
 }
 
 .greybg {
