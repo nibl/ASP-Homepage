@@ -62,6 +62,11 @@ text-align: center;
 padding: 5px 15px 5px 15px;
 }
 
+
+.roundcorners {
+border-radius:30px;
+}
+         
 .greybg {
   background-color: #efefef;
 }
