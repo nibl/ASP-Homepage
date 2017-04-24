@@ -7,6 +7,10 @@ body {
   background-color: #f7f7f7;
 }
 
+img {
+max-width: 80%;
+}
+
 h1 {font-size: 40px;}
 h2 {font-size: 32px;}
 h3 {font-size: 28px;}
