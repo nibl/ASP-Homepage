@@ -28,6 +28,19 @@
       <meta name="twitter:image" content="{{ page.image }}">
     {% endif %}
 
+
+  
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Lato">
+          
+          <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto">
+          
+     {{ if page && page.css }}
+  <link rel='stylesheet' type='text/css' href='/stylesheets/{{ page.css }}.css' />
+{% endif %}
+    
+
     <link rel="stylesheet" href="{{ "/stylesheets/shiori.css" | prepend:site.baseurl }}">
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic|Montserrat:400,700|Open+Sans' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
