@@ -1,14 +1,14 @@
 encoding: utf-8
 
 baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
-url: "http://unscreenme.com/" # the base hostname & protocol for your site
-title: "Unscreenme"
+url: "http://artsupia.org/" # the base hostname & protocol for your site
+title: "Artsupia"
 
 # This is used by feed.xml. Uncomment if you want to use it.
 description: "Art Supplies in Action"
 
 author:
-  name: Marcus Clearspring
+  name: Marcus
   url: /contact
 
 paginate: 5
